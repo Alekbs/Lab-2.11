@@ -4,7 +4,8 @@
 
 def get_func(tag):
     def func(string):
-        return tag[0] + string + tag[1]
+        string = [tag[0], string, tag[1]]
+        return "".join(string)
 
     return func
 

@@ -4,11 +4,11 @@
 
 def get_func(tag):
     def func(string):
-        string = [tag[0], string, tag[2], tag[0:2], string, tag[2]]
+        string = ['<', tag, ">", string, "</", tag, ">"]
         return "".join(string)
 
     return func
 
 
 if __name__ == "__main__":
-    print("Результат работы функции: ", get_func("</>")("обычный текст"))
+    print("Результат работы функции: ", get_func("title")("текст"))
